@@ -1,16 +1,13 @@
 using UnityEngine;
 
-// проигрыватель звука
+public class PlaySound : MonoBehaviour {
 
-public class PlaySound : MonoBehaviour
-    {
     private AudioSource source;
-    private void Start()
-        {
-        if (PlayerPrefs.GetInt("sounds", 1) == 1) // если можно проигрывать звук
-            {
+    private void Start() {
+        if (PlayerPrefs.GetInt("sounds", 1) == 1) {
             source = GetComponent<AudioSource>();
-            source.Play();// проиграть звук
+            source.Play();
             }
         }
+
     }
